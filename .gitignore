@@ -322,3 +322,6 @@ $RECYCLE.BIN/
 
 # .idea
 .idea/*
+
+# exercise
+ex/*
