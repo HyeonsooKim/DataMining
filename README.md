@@ -4,7 +4,7 @@
 ## Python 환경
 
 - anaconda 4.6.11
-  - python 3.8.5
+  - python 3.6.9
   - numpy 1.17.3
   - matplotlib 3.1.1
   - tensorflow 2.0.0
