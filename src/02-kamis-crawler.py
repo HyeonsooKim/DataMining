@@ -1,6 +1,7 @@
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import ssl
+import datetime
 
 context = ssl._create_unverified_context()
 
@@ -11,6 +12,11 @@ action = 'priceinfo'
 regday = '2020-11-03'
 itemcategorycode = 200
 itemcode = 211
+
+# regday = datetime.datetime.now()
+# print(regday.date(), regday.year, regday.month, regday.day, regday.weekday())
+# regday -= datetime.timedelta(days=1)
+# print(regday.date(), regday.year, regday.month, regday.day, regday.weekday())
 
 web_url = 'https://www.kamis.or.kr/customer/price/retail/item.do?action={0}&regday={1}&itemcategorycode={2}&itemcode{3}'.format(action, regday, itemcategorycode, itemcode)
 request = Request(web_url, headers=hds)
