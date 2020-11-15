@@ -1,6 +1,3 @@
-# https://www.kaggle.com/c/titanic/data
-# 데이터 분포 시각화
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
