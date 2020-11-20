@@ -9,6 +9,14 @@ data['Embarked'] = data['Embarked'].map({'S': 0, 'C': 1, 'Q': 2})
 
 # print(data.groupby('Embarked').sum())
 
-data = pd.get_dummies(data, columns=['Embarked'], prefix='Embarked')
+print(data.columns)
 
-print(data)
+print(data[data['Pclass'] == 1]['Cabin'].isnull().sum())
+
+data.loc[(data['Pclass'] == 1) & (data['Cabin'].isnull()), 'Cabin'] = 'A'
+
+print(data[data['Pclass'] == 1]['Cabin'].isnull().sum())
+
+# data = pd.get_dummies(data, columns=['Embarked'], prefix='Embarked')
+
+# print(data)
