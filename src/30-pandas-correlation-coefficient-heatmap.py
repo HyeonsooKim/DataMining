@@ -4,5 +4,5 @@ import seaborn as sns
 
 data = pd.read_csv('../data/train.csv')
 
-sns.heatmap(data=data.corr(), annot=True, fmt='.2f')
+sns.heatmap(data=data.corr(), annot=True, fmt='.2f', cmap='Blues')
 plt.show()
